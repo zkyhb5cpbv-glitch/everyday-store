@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
+  "cleanUrls": true,
   "routes": [
     {
       "src": "/api/(.*)",
@@ -9,7 +8,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "build/client/$1"
+      "dest": "build/$1"
     }
   ]
 }
