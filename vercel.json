@@ -7,8 +7,11 @@
       "dest": "build/server/fetch-handler.js"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "build/$1"
+      "dest": "build/index.html"
     }
   ]
 }
