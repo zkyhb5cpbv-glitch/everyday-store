@@ -1,19 +1,17 @@
 {
   "version": 2,
-  "builds": [
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "build/server/fetch-handler.js"
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
     },
     {
-      "src": "/(.*)",
-      "dest": "build/server/fetch-handler.js"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
